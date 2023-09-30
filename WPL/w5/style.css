@@ -1,0 +1,90 @@
+/*Grid Layout*/
+.wrapper {
+    background-color: greenyellow;
+    display: grid;
+
+    /*fr, %, px*/
+    /*= grid-auto-rows: 1fr*/
+    grid-template-columns: 1fr 500px 2fr;
+    /*do not decide # of columns*/
+    grid-template-columns: repeat(auto-fill, 300px);
+
+    /*auto: minimum size to cover contents
+    if content is larger than 100px, decide auto*/
+    grid-template-rows: minmax(100px, auto);
+
+    justify-content: start; /*end, start*/
+    align-items: start; /*end, start*/
+
+    /*
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    */
+    grid-gap: 1em;
+}
+
+.wrapper > div {
+    background: #aaa;
+    padding: 1em;
+}
+.wrapper > div:nth-child(odd) {
+    background-color: #ee1;
+}
+
+.box1 {
+    /*cell contains 1st~4th line, 1st line*/
+    grid-column: 1/4;
+    grid-row: 1;
+}
+
+.box4 {
+    grid-column: 3;
+    grid-row: 2/3;
+}
+
+/*Flex Layout*/
+.navigation {
+    /*All components in 1 row*/
+    display: flex;
+    /*All components in 1 column*/
+    /*flex-direction: column;*/
+
+    height: 100px;
+
+    /*space-around, space-between(space only between contents), flex-start*/
+    justify-content: space-around;
+    align-items: center; /*center, flex-start, flex-end*/
+
+    /*When size is small, not smashed*/
+    flex-wrap: wrap;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation .mainpage {
+    border: 2px dashed red;
+    /*main is grow 5 times faster, default 100px*/
+    flex: 5 100px;
+    /*arrange components (default: 0)*/
+    order: 1;
+}
+
+.navigation .page1 {
+    border: 2px dashed red;
+    order: 2;
+    /*align self*/
+    align-self: stretch;
+}
+
+/*3rd li child (Page2)*/
+.navigation li:nth-child(3) {
+    align-self: stretch;
+}
+
+.navigation > li {
+    flex-grow: 1;
+    padding: 1em;
+    border: 2px dashed #000000;
+}
