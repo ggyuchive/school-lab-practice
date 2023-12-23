@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <title>Assignment4</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+    <body>
+        <table>
+            <colgroup>
+                <col style="width:50%;">
+                <col style="width:50%;">
+            </colgroup>
+            <tr class = "header1" id="header1">
+                <td id="loginheaderp"></td> 
+                <td id="signupheaderp"></td>
+            </tr>
+            <tr class = "header2" id="header2">
+                <td id="loginheader" onclick="loginclick()">Login</td>
+                <td id="signupheader" onclick="signupclick()">Sign Up</td>
+            </tr>
+            <tr>
+                <td class="formback" colspan="2">
+                    <!--Login form-->
+                    <div id="login">
+                        <form>
+                            <h3>Login</h3>
+                            <h5 id="infologin">Enter user name and password:</h5>
+
+                            <p class="labeling">Email</p>
+                            <div class="inputbar">
+                                <input oninput="handleEmailLogin(this.value)" style="height:27px;" type="email" id="loginemail" name="Email" placeholder="Email">
+                                <i id="loginemailcheck" style="display:none;" class="fas fa-check fa-lg" style="color:rgb(67,162,77);position:absolute;margin-left:80%;margin-top:2.5%;"></i>
+                                <p id="loginemailmessage" class="message">Please enter your password!</p>
+                            </div>
+
+                            <p class="labeling">Password</p>
+                            <div class="inputbar">
+                                <input oninput="handlePasswordLogin(this.value)" style="height:27px" type="password" id="loginpassword" name="password" placeholder="Password"> <br>
+                                <i id="loginpasswordcheck" style="display:none;" class="fas fa-check fa-lg" style="color:rgb(67,162,77);position:absolute;margin-left:80%;margin-top:2.5%;"></i>
+                                <p id="loginpasswordmessage" class="message">Please enter your password!</p>
+                            </div>
+                        </form>
+                        <button onclick="loginbutton()">Login</button>
+                    </div>
+                    <!--Signup form-->
+                    <div id="signup" style="display:none">
+                        <form action="">
+                            <h3>Sign up</h3>
+                            <h5>Fill in the form:</h5>
+
+                            <p class="labeling">First name</p>
+                            <div class="inputbar">
+                                <input oninput="handleFirstname(this.value)" style="height:27px" type="text" id="signupfirstname" placeholder="First name">
+                                <i id="signupfirstnamecheck" style="display:none;" class="fas fa-check fa-lg" style="color:rgb(67,162,77);position:absolute;margin-left:80%;margin-top:2.5%;"></i>
+                                <p id="signupfirstnamemessage" class="message">Please enter your password!</p>
+
+                            </div>
+
+                            <p class="labeling">Last name</p>
+                            <div class="inputbar"> 
+                                <input oninput="handleLastname(this.value)" style="height:27px" type="text" id="signuplastname" placeholder="Last name">
+                                <i id="signuplastnamecheck" style="display:none;" class="fas fa-check fa-lg" style="color:rgb(67,162,77);position:absolute;margin-left:80%;margin-top:2.5%;"></i>
+                                <p id="signuplastnamemessage" class="message">Please enter your password!</p>
+
+                            </div>
+                            
+                            <div class="inputbar">
+                                <span class="radio" style="padding-top:10px;padding-bottom:10px;">
+                                    <label><input oninput="handleGender(1)" class="radio1" id="signupgender1" type="radio" style="width:11px;margin:0;padding:0" value="male"> Male</label>
+                                    <label><input oninput="handleGender(2)" class="radio1" id="signupgender2" type="radio" style="width:11px;margin:0;padding:0" value="female"> Female</label>
+                                </span>
+                                <i id="signupgendercheck" style="display:none;" class="fas fa-check fa-lg" style="color:rgb(67,162,77);position:absolute;margin-left:80%;margin-top:3%;"></i>
+                                <p id="signupgendermessage" class="message">Please enter your password!</p>
+
+                            </div>
+                            
+
+                            <p class="labeling">Email</p>
+                            <div class="inputbar">
+                                <input oninput="handleEmail(this.value)" style="height:27px" type="email" id="signupemail"placeholder="Email">
+                                <i id="signupemailcheck" style="display:none;" class="fas fa-check fa-lg" style="color:rgb(67,162,77);position:absolute;margin-left:80%;margin-top:2.5%;"></i>
+                                <p id="signupemailmessage" class="message">Please enter your password!</p>
+                            </div>
+
+                            <p class="labeling">Password</p>
+                            <div class="inputbar">
+                                <input oninput="handlePassword(this.value)" style="height:27px" type="password" id="signuppassword"placeholder="Password"> <br>
+                                <i id="signuppasswordcheck" style="display:none;" class="fas fa-check fa-lg" style="color:rgb(67,162,77);position:absolute;margin-left:80%;margin-top:2.5%;"></i>
+                                <p id="signuppasswordmessage" class="message">Please enter your password!</p>
+                            </div>
+
+                            <p class="labeling">Confirm password</p>
+                            <div class="inputbar">
+                                <input oninput="handleConfirmPassword(this.value)" style="height:27px" type="password" id="signupconfirmpassword" placeholder="Confirm password"> <br>
+                                <i id="signupconfirmpasswordcheck" style="display:none;" class="fas fa-check fa-lg" style="color:rgb(67,162,77);position:absolute;margin-left:80%;margin-top:2.5%;"></i>
+                                <p id="signupconfirmpasswordmessage" class="message">Please enter your password!</p>
+                            </div>
+                        </form>
+                        <button onclick="signupbutton()">Sign Up</button>
+                    </div>
+                    <!--Signup success page-->
+                    <div id="signupsuccess" style="display:none">
+                        <h3 class="result">You are signed up.</h3>
+                    </div>
+                    <!--Login success page-->
+                    <div id="loginsuccess" style="display:none">
+                        <h3 class="result">You are logged in.</h3>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

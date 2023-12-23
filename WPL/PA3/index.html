@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+    <body>
+        <!--Start page-->
+        <div id="startpg">
+            <h1>Python Quiz</h1>
+            <button class="movebutton" onclick="click1(-1)">Start Quiz</button>
+        </div>
+        <!--question page-->
+        <div id="question" style="display:none">
+            <table>
+                <tr>
+                    <td id="Iquestionnum" style="width: 25%">Question 1/4</td>
+                    <td></td>
+                    <td style="width: 5%">Score</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="progress-container">
+                        <div id="Iprogress" class="progress-bar" style="width:25%"></div></div>
+                    </td>
+                    <td></td>
+                    <td id="Iscore" class="curscore">0</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><h1 id="Iquestion">Which one is NOT a legal variable name?</h1></td>
+                </tr>
+                <tr><td colspan="3">
+                    <div class="container" onclick="click1(1)">
+                        <button id="Ianswer1" class="big-button">_myvar</button>
+                        <button class="small-button">A</button>
+                    </div>
+                </td></tr>
+                <tr><td colspan="3">
+                    <div class="container" onclick="click1(2)">
+                        <button id="Ianswer2" class="big-button">Myvar</button>
+                        <button class="small-button">B</button>
+                    </div>
+                </td></tr>
+                <tr><td colspan="3">
+                    <div class="container" onclick="click1(3)">
+                        <button id="Ianswer3" class="big-button">my_var</button>
+                        <button class="small-button">C</button>
+                    </div>
+                </td></tr>
+                <tr><td colspan="3">
+                    <div class="container" onclick="click1(4)">
+                        <button id="Ianswer4" class="big-button">my-var</button>
+                        <button class="small-button">D</button>
+                    </div>
+                </td></tr>
+            </table>
+        </div>
+        <!--Result page-->
+        <div id="endpg" style="display:none">
+            <h1 id="Iresult"></h1>
+            <button class="movebutton" onclick="restart()">Play Again</button>
+        </div>
+    </body>
+</html>

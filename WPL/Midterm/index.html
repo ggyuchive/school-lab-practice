@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKKU ATM</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+    <body>
+        <!--Account Number input page-->
+        <div id="page1">
+            <h1>SKKU ATM</h1>
+            <h2>Enter your 16 digit account number or insert your card below:</h2>
+            <input type="text" value="Enter Account Number" id="account"> <br>
+            <button onclick="click1(1)">1</button>
+            <button onclick="click1(2)">2</button>
+            <button onclick="click1(3)">3</button> <br>
+            <button onclick="click1(4)">4</button>
+            <button onclick="click1(5)">5</button>
+            <button onclick="click1(6)">6</button> <br>
+            <button onclick="click1(7)">7</button>
+            <button onclick="click1(8)">8</button>
+            <button onclick="click1(9)">9</button> <br>
+            <button class="enter" onclick="click1_enter()">Enter</button>
+            <button onclick="click1(0)">0</button>
+            <button class="del" onclick="click1_del()">Del</button> <br>
+        </div>
+        <!--Pin Number input page-->
+        <div id="page2" style="display:none">
+            <h2>Please enter your PIN:</h2>
+            <input type="text" value="Enter PIN" id="pin"> <br>
+            <button onclick="click2(1)">1</button>
+            <button onclick="click2(2)">2</button>
+            <button onclick="click2(3)">3</button> <br>
+            <button onclick="click2(4)">4</button>
+            <button onclick="click2(5)">5</button>
+            <button onclick="click2(6)">6</button> <br>
+            <button onclick="click2(7)">7</button>
+            <button onclick="click2(8)">8</button>
+            <button onclick="click2(9)">9</button> <br>
+            <button class="enter" onclick="click2_enter()">Enter</button>
+            <button onclick="click2(0)">0</button>
+            <button class="del" onclick="click2_del()">Del</button> <br>
+            <button class="return" onclick="click2_return()">Return Card</button>
+        </div>
+        <!--Select Option Page-->
+        <div id="page3" style="display:none">
+            <h1>WELCOME TO SKKU BANK</h1>
+            <button onclick="click3(1)">Account Information</button> <br>
+            <button onclick="click3(2)">Withdraw Funds</button> <br>
+            <button onclick="click3(3)">Deposit Funds</button> <br>
+            <button onclick="click3(4)">Transfer</button> <br>
+            <button class="return" onclick="click3_return()">Return Card</button>
+        </div>
+        <!--Account Information Page-->
+        <div id="page4" style="display:none">
+            <h1>Account Information</h1>
+            <h2 id="curbalance">Current Balance:</h2>
+            <table id="infotable">
+                <tbody>
+                    <!--add data dynamically-->
+                </tbody>
+            </table>
+            <button class="return" onclick="click4_return()">Back</button>
+        </div>
+        <!--Withdraw Funds Page (1)-->
+        <div id="page5" style="display:none">
+            <h3>Enter the amount to withdraw</h3>
+            <table>
+                <tr>
+                    <td>Quick Links</td> <td></td> <td></td> <td></td> <td>Quick Links</td>
+                </tr>
+                <tr>
+                    <td><button onclick="setdraw(20)">20</button></td> <td></td>
+                    <td><a id="image100p" onclick="changedraw(100)"></a></td> <td></td>
+                    <td><button onclick="setdraw(100)">100</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="setdraw(40)">40</button></td> <td></td>
+                    <td><a id="image20p" onclick="changedraw(20)"></span></a> <td></td>
+                    <td><button onclick="setdraw(200)">200</button></td>
+                </tr>
+                <tr>
+                    <td></td><td></td>
+                    <td><input type="text" id="draw" value="0"></td>
+                    <td><button class="enter" onclick="click5_enter()">Enter</button></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><button onclick="setdraw(60)">60</button></td> <td></td>
+                    <td><a id="image20d" onclick="changedraw(-20)"></span></a> <td></td>
+                    <td><button onclick="setdraw(300)">300</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="setdraw(80)">80</button></td> <td></td>
+                    <td><a id="image100d" onclick="changedraw(-100)"></span></a> <td></td>
+                    <td><button class="return" onclick="click5_return()">Back</button></td>
+                </tr>
+            </table>
+        </div>
+        <!--Withdraw Funds Page (2)-->
+        <div id="page6" style="display:none">
+            <h1>Withdraw</h1>
+            <h2 id="drawq"><!--Dynamic change value ex) $0?--></h2>
+            <button class="yes" onclick="yesclick()">YES</button>
+            <button class="no" onclick="noclick()">NO</button>
+        </div>
+        <!--Withdraw Funds Page (3)-->
+        <div id="page7" style="display:none">
+            <h2>Money has been withdrawn.</h2>
+            <img src="images/checkmark.png">
+            <br>
+            <button onclick="homeclick()">Home</button>
+            <button onclick="withdrawclick()">Perform Another Withdraw</button>
+            <button class="returncard" onclick="returncardclick()">Return Card</button>
+        </div>
+        <!--Deposit Funds Page (1)-->
+        <div id="page8" style="display:none">
+            <h2>Enter the amount to deposit</h2>
+            <input type="text" value="$0000.00" id="deposit"> <br>
+            <button onclick="click8(1)">1</button>
+            <button onclick="click8(2)">2</button>
+            <button onclick="click8(3)">3</button> <br>
+            <button onclick="click8(4)">4</button>
+            <button onclick="click8(5)">5</button>
+            <button onclick="click8(6)">6</button> <br>
+            <button onclick="click8(7)">7</button>
+            <button onclick="click8(8)">8</button>
+            <button onclick="click8(9)">9</button> <br>
+            <button onclick="click8(0)">0</button>
+            <button id="dot" onclick="click8(-1)">.</button>
+            <button class="del" onclick="click8_del()">Del</button> <br>
+            <button class="enter" onclick="click8_enter()">Enter</button> <br>
+            <button class="return" onclick="click8_return()">Back</button>
+        </div>
+        <!--Deposit Funds Page (2)-->
+        <div id="page9" style="display:none">
+            <h1>Are you sure you want to deposit the amount specified?</h1>
+            <h2 id="depositq"><!--Dynamic change value ex) $12.70?--></h2>
+            <button class="yes" onclick="yesclick2()">YES</button>
+            <button class="no" onclick="noclick2()">NO</button>
+        </div>
+        <!--Deposit Funds Page (3)-->
+        <div id="page10" style="display:none">
+            <h2>Enter the specified amount of money into the ATM.</h2>
+            <button onclick="okclick()">OK</button>
+        </div>
+        <!--Deposit Funds Page (4)-->
+        <div id="page11" style="display:none">
+            <h2>Money has been deposited.</h2>
+            <img src="images/checkmark.png">
+            <br>
+            <button onclick="homeclick2()">Home</button>
+            <button onclick="withdrawclick2()">Deposit again</button>
+            <button class="returncard" onclick="returncardclick2()">Return Card</button>
+        </div>
+        <!--Transfer Page (1)-->
+        <div id="page12" style="display:none">
+            <table>
+                <tr>
+                    <td>
+                        <h1>From</h1>
+                        <select id="from">
+                            <option value="-1" hidden selected>Choose an Account</option>
+                            <option value="1234567890123456" width="100px">1234567890123456</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" value="$0000.00" id="transfer"> <br>
+                        <button onclick="click12(1)">1</button>
+                        <button onclick="click12(2)">2</button>
+                        <button onclick="click12(3)">3</button> <br>
+                        <button onclick="click12(4)">4</button>
+                        <button onclick="click12(5)">5</button>
+                        <button onclick="click12(6)">6</button> <br>
+                        <button onclick="click12(7)">7</button>
+                        <button onclick="click12(8)">8</button>
+                        <button onclick="click12(9)">9</button> <br>
+                        <button onclick="click12(0)">0</button>
+                        <button id="dot2" onclick="click12(-1)">.</button>
+                        <button class="del" onclick="click12_del()">Del</button> <br>
+                        <button class="enter" onclick="click12_enter()">Enter</button> <br>
+                    </td>
+                    <td>
+                        <h1>To</h1>
+                        <select id="to">
+                            <option value="-1" hidden selected>Choose an Account</option>
+                            <option value="1234567887654321">1234567887654321</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <button class="return" onclick="click12_return()">Back</button>
+        </div>
+        <!--Transfer Page (2)-->
+        <div id="page13" style="display:none">
+            <h1>Transfer?</h1>
+            <h2 id="transferq"><!--Dynamic change value ex) $12.70 \n From ~ \n To ~--></h2>
+            <h2>From 1234567890123456</h2>
+            <h2>To 1234567887654321</h2>
+            <button class="yes" onclick="yesclick3()">YES</button>
+            <button class="no" onclick="noclick3()">NO</button>
+        </div>
+        <!--Transfer Page (3)-->
+        <div id="page14" style="display:none">
+            <h2>Money has been transferred.</h2>
+            <img src="images/checkmark.png">
+            <br>
+            <button onclick="homeclick3()">Home</button>
+            <button onclick="withdrawclick3()">Perform Another Transaction</button>
+            <button class="returncard" onclick="returncardclick3()">Return Card</button>
+        </div>
+    </body>
+</html>

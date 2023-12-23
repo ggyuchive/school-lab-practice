@@ -1,0 +1,619 @@
+html {
+    background-color: rgb(227,252,255);
+}
+body {
+    text-align: center;
+}
+
+/*page1 css area*/
+#page1 h1 {
+    margin-top: 0;
+    color:rgb(0,134,134);
+    font-size: 80px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+#page1 h2 {
+    font-weight: 500;
+    font-size: 22px;
+}
+#page1 input {
+    text-align: center;
+    font-weight: 600;
+    height: 40px;
+    width: 350px;
+    border-radius: 10px;
+    border-color: rgb(25,125,125);
+    border-width: 4px;
+    font-size: 25px;
+    color: gray;
+}
+#page1 button {
+    height: 70px;
+    width: 70px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-width: 4px;
+    border-radius: 10px;
+    border-color: rgb(25,125,125);
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+#page1 .enter {
+    color: green;
+}
+#page1 .del {
+    color: red;
+}
+
+/*page2 css area*/
+#page2 h1 {
+    margin-top: 0;
+    color:rgb(0,134,134);
+    font-size: 80px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+#page2 h2 {
+    font-weight: 500;
+    font-size: 22px;
+}
+#page2 input {
+    text-align: center;
+    font-weight: 600;
+    height: 40px;
+    width: 200px;
+    border-radius: 10px;
+    border-color: rgb(25,125,125);
+    border-width: 4px;
+    font-size: 25px;
+    color: gray;
+}
+#page2 button {
+    height: 70px;
+    width: 70px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-width: 4px;
+    border-radius: 10px;
+    border-color: rgb(25,125,125);
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+#page2 .enter {
+    color: green;
+}
+#page2 .del {
+    color: red;
+}
+#page2 .return {
+    margin-left: 35%;
+    width: 160px;
+    color: white;
+    font-weight: 500;
+    border-radius: 5px;
+    background-color: rgb(245,91,58);
+    border-color: rgb(255,30,2);
+}
+
+/*page3 css area*/
+#page3 h1 {
+    margin-top: 0;
+    color:rgb(0,134,134);
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+#page3 button {
+    height: 70px;
+    width: 500px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    border-width: 4px;
+    border-radius: 5px;
+    border-color: rgb(25,125,125);
+    background-color: rgb(227,252,255);
+    font-size: 27px;
+    font-weight: 500;
+    text-align: center;
+}
+#page3 button:hover {
+    background-color: rgb(169,213,232);
+}
+#page3 .return {
+    margin-left: 35%;
+    width: 160px;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: rgb(245,91,58);
+    border-color: rgb(255,30,2);
+}
+#page3 button.return:hover {
+    background-color: rgb(245,91,58);
+}
+
+/*page4 css area*/
+#page4 h1 {
+    margin-top: 0;
+    color:rgb(0,134,134);
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+#page4 h2 {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+#page4 .return {
+    margin-left: 35%;
+    width: 110px;
+    height: 70px;
+    color: white;
+    font-weight: 500;
+    font-size: 25px;
+    border-radius: 5px;
+    border-width: 4px;
+    margin-left: 90%;
+    background-color: rgb(245,91,58);
+    border-color: rgb(255,30,2);
+}
+#page4 button.return:hover {
+    background-color: black;
+}
+#page4 table {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 30px;
+    border-spacing: 0px;
+    border: 1px solid black;
+}
+#page4 tr:nth-child(1) {
+    font-weight: 600;
+}
+#page4 tr:nth-child(odd) {
+    background-color: white;
+}
+#page4 tr:nth-child(even) {
+    background-color: lightgray;
+}
+#page4 td {
+    height: 30px;
+    padding-left: 5px;
+}
+#page4 tr, #page4 td {
+    border-spacing: 0px;
+    padding: 2px 2px 2px 2px;
+    padding-left: 10px;
+}
+
+/*page5 css area*/
+#page5 h3 {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+#page5 button {
+    width: 110px;
+    height: 70px;
+    color: white;
+    font-weight: 500;
+    font-size: 25px;
+    border-radius: 5px;
+    border-width: 4px;
+    background-color: rgb(42,61,81);
+    border-color: rgb(0,0,0);
+}
+#page5 button:hover {
+    background-color: rgb(211,211,211);
+    color: black;
+}
+#page5 .enter {
+    height: 60px;
+    background-color: rgb(10,170,156);
+    border-color: rgb(0,109,0);
+}
+#page5 .enter:hover {
+    background-color: rgb(0,109,0);
+    color: white;
+}
+#page5 .return {
+    background-color: rgb(245,91,58);
+    border-color: rgb(255,30,2);
+}
+
+#page5 table {
+    width: 100%;
+}
+#page5 td {
+    text-align: center;
+    width: 20%;
+    font-size: 20px;
+}
+#page5 td:nth-child(1) {
+    text-align: left;
+}
+#page5 td:last-child {
+    text-align: right;
+}
+#page5 tr:nth-child(3) {
+    vertical-align: bottom;
+}
+#page5 tr:nth-child(5) {
+    vertical-align: top;
+}
+#page5 a {
+    display: inline-block;
+    width: 110px; height: 100px;
+    
+    background-size: cover;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+    font-weight: bold;
+}
+#page5 #image100p {background-image: url('images/uparrow100copy.png');}
+#page5 #image20p {background-image: url('images/uparrow20copy.png');}
+#page5 #image20d {background-image: url('images/downarrow20copy.png');}
+#page5 #image100d {background-image: url('images/downarrow100copy.png');}
+#page5 #image100p:hover {background-image: url('images/uparrow100copyhover.png');}
+#page5 #image20p:hover {background-image: url('images/uparrow20copyhover.png');}
+#page5 #image20d:hover {background-image: url('images/downarrow20copyhover.png');}
+#page5 #image100d:hover {background-image: url('images/downarrow100copyhover.png');}
+#page5 input {
+    height: 40px;
+    width: 130px;
+    text-align: center;
+    font-size: 25px;
+}
+
+/*page6 css area*/
+#page6 h1 {
+    margin-top: 0;
+    color:rgb(0,134,134);
+    font-size: 70px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+#page6 h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 40px;
+}
+#page6 button {
+    width: 110px;
+    height: 60px;
+    margin-right: 20px;
+    margin-left: 20px;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 5px;
+    border-width: 4px;
+    background-color: rgb(10,170,156);
+    border-color: rgb(0,109,0);
+}
+#page6 button:hover {
+    background-color: rgb(0,109,0);
+}
+#page6 .no {
+    background-color: rgb(245,91,58);
+    border-color: rgb(255,30,2);
+}
+#page6 button.no:hover {
+    background-color: rgb(80,7,0);
+}
+
+/*page7 css area*/
+#page7 h2 {
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+#page7 button {
+    margin-top: 50px;
+    width: auto;
+    height: 60px;
+    margin-left:40px;
+    margin-right:40px;
+    padding: 20px;
+    color: white;
+    font-weight: 500;
+    font-size: 17px;
+    border-radius: 5px;
+    background-color: rgb(42,61,81);
+    border-width: 0;
+}
+#page7 button:hover {
+    background-color: rgb(20, 20, 20);
+}
+#page7 .returncard {
+    background-color: rgb(245,91,58);
+}
+#page7 .returncard:hover {
+    background-color: rgb(255,30,2);
+}
+
+/*page8 css area*/
+#page8 h2 {
+    font-weight: 500;
+}
+#page8 input {
+    text-align: center;
+    font-weight: 500;
+    height: 40px;
+    width: 200px;
+    border-width: 1px;
+    font-size: 25px;
+    color: gray;
+}
+#page8 button {
+    height: 50px;
+    width: 50px;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-width: 4px;
+    border-radius: 10px;
+    border-color: rgb(25,125,125);
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+#page8 .enter {
+    width: 180px;
+    color: green;
+}
+#page8 .del {
+    color: red;
+}
+#page8 .return {
+    width: 110px;
+    height: 70px;
+    color: white;
+    margin-top: 100px;
+    margin-left: 35%;
+    background-color: rgb(245,91,58);
+    border-color: rgb(255,30,2);
+}
+#page8 .return:hover {
+    background-color: rgb(255,30,2);
+}
+
+/*page9 css area*/
+#page9 h1 {
+    margin-top: 0;
+    color:rgb(0,134,134);
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+#page9 h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 40px;
+}
+#page9 button {
+    width: 110px;
+    height: 60px;
+    margin-right: 20px;
+    margin-left: 20px;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 5px;
+    border-width: 4px;
+    background-color: rgb(10,170,156);
+    border-color: rgb(0,109,0);
+}
+#page9 button:hover {
+    background-color: rgb(0,109,0);
+}
+#page9 .no {
+    background-color: rgb(245,91,58);
+    border-color: rgb(255,30,2);
+}
+#page9 button.no:hover {
+    background-color: rgb(80,7,0);
+}
+
+/*page10 css area*/
+#page10 h2 {
+    font-weight: 500;
+}
+#page10 button {
+    width: 450px;
+    height: 60px;
+    color: white;
+    font-weight: 500;
+    font-size: 25px;
+    border-radius: 5px;
+    border-width: 4px;
+    background-color: rgb(42,61,81);
+    border-color: rgb(0,0,0);
+}
+#page10 button:hover {
+    background-color: rgb(211,211,211);
+    color: black;
+}
+/*page11 css area*/
+#page11 h2 {
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+#page11 button {
+    margin-top: 50px;
+    width: auto;
+    height: 60px;
+    margin-left:40px;
+    margin-right:40px;
+    padding: 20px;
+    color: white;
+    font-weight: 500;
+    font-size: 17px;
+    border-radius: 5px;
+    background-color: rgb(42,61,81);
+    border-width: 0;
+}
+#page11 button:hover {
+    background-color: rgb(20, 20, 20);
+}
+#page11 .returncard {
+    background-color: rgb(245,91,58);
+}
+#page11 .returncard:hover {
+    background-color: rgb(255,30,2);
+}
+/*page12 css area*/
+#page12 h2 {
+    font-weight: 500;
+}
+#page12 input {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 500;
+    height: 40px;
+    width: 200px;
+    border-width: 1px;
+    font-size: 25px;
+    color: gray;
+}
+#page12 button {
+    height: 50px;
+    width: 50px;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-width: 4px;
+    border-radius: 10px;
+    border-color: rgb(25,125,125);
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+#page12 .enter {
+    width: 180px;
+    color: green;
+}
+#page12 .del {
+    color: red;
+}
+#page12 .return {
+    width: 110px;
+    height: 70px;
+    color: white;
+    margin-top: 50px;
+    margin-left: 35%;
+    background-color: rgb(245,91,58);
+    border-color: rgb(255,30,2);
+}
+#page12 .return:hover {
+    background-color: rgb(255,30,2);
+}
+#page12 span {
+    color:rgb(0,134,134);
+    font-size: 40px;
+    font-weight: 500;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+#page12 td:nth-child(1), #page12 td:nth-child(3) {
+    padding-top: 0;
+    width: 50%;
+    vertical-align: top;
+}
+#page12 td:nth-child(2) {
+    padding-top: 30px;
+}
+#page12 h1 {
+    color:rgb(0,134,134);
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+#page12 select {
+    background-color: rgb(42,61,81);
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    width: 220px;
+    height: 55px;
+    border-radius: 5px;
+    font-size: 17px;
+    text-align: center;
+}
+#page12 option {
+    background-color: white;
+    color: gray;
+    font-size: 15px;
+    width: 400px;
+    height: 100px;
+}
+/*page13 css area*/
+#page13 h1 {
+    margin-top: 0;
+    color:rgb(0,134,134);
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+#page13 h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 40px;
+}
+#page13 button {
+    width: 110px;
+    height: 60px;
+    margin-right: 20px;
+    margin-left: 20px;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 5px;
+    border-width: 4px;
+    background-color: rgb(10,170,156);
+    border-color: rgb(0,109,0);
+}
+#page13 button:hover {
+    background-color: rgb(0,109,0);
+}
+#page13 .no {
+    background-color: rgb(245,91,58);
+    border-color: rgb(255,30,2);
+}
+#page13 button.no:hover {
+    background-color: rgb(80,7,0);
+}
+/*page14 css area*/
+#page14 h2 {
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+#page14 button {
+    margin-top: 50px;
+    width: auto;
+    height: 60px;
+    margin-left:40px;
+    margin-right:40px;
+    padding: 20px;
+    color: white;
+    font-weight: 500;
+    font-size: 17px;
+    border-radius: 5px;
+    background-color: rgb(42,61,81);
+    border-width: 0;
+}
+#page14 button:hover {
+    background-color: rgb(20, 20, 20);
+}
+#page14 .returncard {
+    background-color: rgb(245,91,58);
+}
+#page14 .returncard:hover {
+    background-color: rgb(255,30,2);
+}
