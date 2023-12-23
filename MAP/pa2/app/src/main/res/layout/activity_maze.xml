@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MazeActivity">
+
+    <TextView
+        android:id="@+id/turncounttextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Turn : 0"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/hintbutton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/mazegridView" />
+
+    <Button
+        android:id="@+id/hintbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="HINT"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/turncounttextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/mazegridView" />
+
+    <GridView
+        android:id="@+id/mazegridView"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hintbutton"
+        app:layout_constraintBottom_toTopOf="@+id/upbutton" />
+
+    <Button
+        android:id="@+id/upbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UP"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mazegridView"
+        app:layout_constraintBottom_toTopOf="@+id/downbutton" />
+
+    <Button
+        android:id="@+id/downbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DOWN"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upbutton" />
+
+    <Button
+        android:id="@+id/leftbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="LEFT"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/upbutton"
+        app:layout_constraintTop_toTopOf="@+id/upbutton"
+        app:layout_constraintBottom_toBottomOf="@+id/downbutton" />
+
+    <Button
+        android:id="@+id/rightbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="RIGHT"
+        app:layout_constraintStart_toEndOf="@+id/upbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/upbutton"
+        app:layout_constraintBottom_toBottomOf="@+id/downbutton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

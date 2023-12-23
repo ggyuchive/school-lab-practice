@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background ="@drawable/bg"
+    tools:context=".DescriptionActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/newfont2"
+        android:text=" 1. 사용할 수 있는 4개의 랜덤한 한 자리 숫자와 10~50 중 4개의 랜덤한 타깃 숫자가 주어집니다.\n\n
+2. easy 모드에서는 사칙연산, 괄호를 활용해 수식을 만들 수 있습니다.\n\n
+3. hard 모드에서는 사칙연산, 괄호, x, x^2, 미분, 적분 연산을 활용해 수식을 만들 수 있습니다.\n\n
+4. 숫자들과 연산들을 활용해 타깃 숫자를 만들어 클릭하면 점수가 더해집니다.\n\n
+5. 점수는 타깃 숫자를 맞히면 숫자만큼 점수가 더해집니다. 미분, 적분을 사용했다면 숫자의 2배만큼 점수가 더해집니다.\n\n
+6. BEFORE 버튼으로 이전 상태로 돌아갈 수 있고, RESET 버튼으로 사용할 수 있는 숫자를 초기화할 수 있습니다."
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/beforebutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/beforebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#28844B"
+        android:fontFamily="@font/newfont1"
+        android:text="메인 화면으로 돌아가기"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/newfont1"
+        android:text="게임 설명"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
